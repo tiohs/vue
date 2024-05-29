@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning VUE</title>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+  <h1>Hamilton Silva</h1>
+
+  <div id="app">
+    <div>
+      <h3>Dados do Utente</h3>
+      <strong>Nome</strong> : <span>{{ name }}</span> <br>
+      <div v-if="statusShowAge">
+        <strong>Idade</strong> : <span>{{age}}</span>
+      </div>
+    </div>
+    <a :[key]="url"> ... </a>
+    <button v-on:click="showAge">Ver idade</button>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
