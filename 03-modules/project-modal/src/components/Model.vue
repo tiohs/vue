@@ -1,6 +1,6 @@
 <template>
   <div class="backdrop">
-    <div class="model">
+    <div class="modal">
       <p>Modal content !</p>
     </div>
   </div>

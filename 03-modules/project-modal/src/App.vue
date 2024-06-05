@@ -1,8 +1,5 @@
 <template>
   <h1>{{ title }}</h1>
-  <br />
-  <input type="text" ref="name" />
-  <button @click="handleClick">Add</button>
   <Model />
 </template>
 

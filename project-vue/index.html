@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://unpkg.com/vue@3.0.2"></script>
+<body>
+  <div id="app">
+    <div class="app-container" id="taskList">
+      <h1 class="app-header">TO DO LISTE</h1>
+      <div class="add-task">
+        <input type="text" autocomplete="off" placeholder="Adicionar uma tarefa" v-model="task" @keyup.enter="newItem" class="task-input">
+        
+        <input type="submit" value="+" class="submit-task" @click="newItem" title="Add Task" />
+      </div>
+      <ul class="task-list">
+        <li class="task-list-item" v-for="task in tasks">
+          <label class="task-list-item-label">
+            <input type="checkbox">
+            <span>{{task.name}}</span>
+          </label>
+          <span @click="delItem(task)" class="delete-btn" title="Delete Task"></span>
+        </li>
+      </ul> 
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
